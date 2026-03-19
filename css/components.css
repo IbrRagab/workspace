@@ -1,0 +1,74 @@
+/* Cards */
+.card {
+    background: var(--color-surface);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+    transition: all var(--transition-normal);
+}
+.card.interactive:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+    cursor: pointer;
+}
+.card-body {
+    padding: var(--spacing-6);
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-3) var(--spacing-6);
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+    font-size: var(--font-size-sm);
+    text-decoration: none;
+}
+.btn-primary {
+    background: var(--color-primary);
+    color: white;
+}
+.btn-primary:hover {
+    background: var(--color-primary-hover);
+}
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-main);
+}
+.btn-outline:hover {
+    background: var(--color-background);
+}
+.btn-ghost {
+    background: transparent;
+    color: var(--color-primary);
+}
+.btn-ghost:hover {
+    background: var(--color-primary-light);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: var(--spacing-1) var(--spacing-2);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+}
+.badge-success { background: #ecfdf5; color: var(--color-success); }
+.badge-warning { background: #fffbeb; color: var(--color-warning); }
+.badge-primary { background: var(--color-primary-light); color: var(--color-primary); }
+.badge-neutral { background: var(--color-background); color: var(--color-text-muted); }
+
+/* Typography Helpers */
+.text-h1 { font-size: var(--font-size-3xl); font-weight: 700; letter-spacing: -0.02em; color: var(--color-text-main); margin-bottom: var(--spacing-4); }
+.text-h2 { font-size: var(--font-size-2xl); font-weight: 700; color: var(--color-text-main); margin-bottom: var(--spacing-4); }
+.text-h3 { font-size: var(--font-size-xl); font-weight: 600; margin-bottom: var(--spacing-2); }
+.text-muted { color: var(--color-text-muted); }
+.text-primary { color: var(--color-primary); }
