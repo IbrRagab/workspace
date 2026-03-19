@@ -37,3 +37,67 @@ ul {
     font-size: var(--font-size-lg);
     color: var(--color-text-muted);
 }
+
+/* ========================================= */
+/* RESPONSIVE OVERRIDES (TABLET & MOBILE)    */
+/* ========================================= */
+
+@media (max-width: 992px) {
+    /* Reflow rigid inline grid templates into flex columns */
+    [style*="grid-template-columns: 1fr 1fr"],
+    [style*="grid-template-columns: 1fr 2fr"],
+    [style*="grid-template-columns: repeat(3, 1fr)"],
+    [style*="grid-template-columns: repeat(4, 1fr)"] {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: var(--spacing-6) !important;
+    }
+
+    /* Collapse navigation items in headers */
+    header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        margin-top: var(--spacing-4);
+    }
+    
+    header {
+        flex-wrap: wrap !important;
+        height: auto !important;
+        padding: var(--spacing-4) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Responsive typography scaling */
+    h1[style*="font-size: 3.5rem"], 
+    h1[style*="font-size: 4rem"] {
+        font-size: 2.5rem !important;
+    }
+    
+    h1[style*="font-size: 2.5rem"] {
+        font-size: 2rem !important;
+    }
+
+    /* Padding adjustments for large container block sections */
+    [style*="padding: var(--spacing-16) var(--spacing-8)"] {
+        padding: var(--spacing-8) var(--spacing-4) !important;
+    }
+
+    [style*="padding: var(--spacing-20)"] {
+        padding: var(--spacing-10) var(--spacing-4) !important;
+    }
+    
+    main[style*="padding: 0 var(--spacing-6);"] {
+        padding: 0 var(--spacing-4) !important;
+    }
+
+    /* Ensure structural buttons expand fully on small touch screens */
+    #main-content .btn, 
+    main .btn,
+    footer .btn {
+        width: 100% !important;
+        justify-content: center;
+        text-align: center;
+    }
+}

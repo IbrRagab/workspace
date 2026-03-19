@@ -32,3 +32,64 @@
     overflow-y: auto;
     padding: var(--spacing-6) var(--spacing-8);
 }
+
+/* ========================================= */
+/* DASHBOARD LAYOUT RESPONSIVENESS           */
+/* ========================================= */
+
+@media (max-width: 768px) {
+    .app-layout {
+        flex-direction: column;
+    }
+
+    #sidebar-container {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--color-border);
+    }
+    
+    /* Hide the sidebar branding on mobile to save vertical space */
+    #sidebar-container > div:first-child {
+        display: none !important;
+    }
+
+    /* Convert vertical sidebar nav to a horizontal scrollable tab row */
+    #sidebar-container nav {
+        padding: var(--spacing-2);
+    }
+
+    #sidebar-container nav ul {
+        flex-direction: row !important;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        gap: var(--spacing-2) !important;
+        scrollbar-width: none; /* Auto-hide scrollbar Firefox */
+        -ms-overflow-style: none; /* Auto-hide IE */
+    }
+
+    #sidebar-container nav ul::-webkit-scrollbar {
+        display: none; /* Chrome/Safari */
+    }
+
+    .nav-item {
+        white-space: nowrap;
+        padding: var(--spacing-2) var(--spacing-3) !important;
+    }
+
+    /* Adjust header metrics */
+    #header-container {
+        height: auto;
+        padding: var(--spacing-3) var(--spacing-4) !important;
+    }
+    
+    #header-auth-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    /* Adjust main content block metrics */
+    #main-content {
+        padding: var(--spacing-4) !important;
+    }
+}
